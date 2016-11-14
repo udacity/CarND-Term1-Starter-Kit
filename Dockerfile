@@ -30,13 +30,13 @@ RUN conda install --yes pyyaml
 RUN conda env create -f=environment.yml
 
 # Term 1 workdir
-RUN mkdir /term1
+RUN mkdir /src
 
 # TensorBoard
 EXPOSE 6006
 # Jupyter
 EXPOSE 8888
 
-WORKDIR "/term1"
+WORKDIR "/src"
 
 CMD ["/bin/bash"]
