@@ -6,6 +6,7 @@ dependencies:
     - python==3.5.2
     - numpy
     - matplotlib
+    - tensorflow
     - jupyter
     - opencv3
     - pillow
@@ -16,4 +17,4 @@ dependencies:
     - flask-socketio
     - pip:
         - moviepy
-        - keras
+        - git+https://github.com/fchollet/keras.git

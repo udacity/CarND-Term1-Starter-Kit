@@ -1,0 +1,42 @@
+FROM python
+
+MAINTAINER @joshuacook
+
+# Pick up some TF dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        build-essential \
+        curl \
+        libfreetype6-dev \
+        libpng12-dev \
+        libzmq3-dev \
+        pkg-config \
+        python3-dev \
+        rsync \
+        software-properties-common \
+        unzip \
+        && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
+    python get-pip.py && \
+    rm get-pip.py
+
+ADD https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh tmp/Miniconda3-latest-Linux-x86_64.sh
+RUN bash tmp/Miniconda3-latest-Linux-x86_64.sh -b
+ENV PATH $PATH:/root/miniconda3/bin/
+COPY environment.yml  .
+RUN conda install --yes pyyaml
+RUN conda env create -f=environment.yml
+
+# Term 1 workdir
+RUN mkdir /term1
+
+# TensorBoard
+EXPOSE 6006
+# Jupyter
+EXPOSE 8888
+
+WORKDIR "/term1"
+
+CMD ["/bin/bash"]
