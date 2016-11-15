@@ -1,4 +1,4 @@
-FROM python
+FROM python:3.5.2
 
 MAINTAINER @joshuacook
 
@@ -25,18 +25,29 @@ RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
 ADD https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh tmp/Miniconda3-latest-Linux-x86_64.sh
 RUN bash tmp/Miniconda3-latest-Linux-x86_64.sh -b
 ENV PATH $PATH:/root/miniconda3/bin/
+
 COPY environment.yml  .
 RUN conda install --yes pyyaml
-RUN conda env create -f=environment.yml
+RUN conda env create -f=environment.yml --name carnd_term_1
+RUN conda install --name carnd_term_1 -c conda-forge tensorflow
+
+# Set up our notebook config.
+COPY jupyter_notebook_config.py /root/.jupyter/
 
 # Term 1 workdir
 RUN mkdir /src
+WORKDIR "/src"
 
 # TensorBoard
 EXPOSE 6006
 # Jupyter
 EXPOSE 8888
+# Flask Server
+EXPOSE 4567
 
-WORKDIR "/src"
-
-CMD ["/bin/bash"]
+## Two Birds, One Stone
+# 1. sources conda environment
+# 2. prevents the zombie container issue when started as pid 1
+COPY run.sh /
+RUN chmod +x /run.sh
+ENTRYPOINT ["/run.sh"]
