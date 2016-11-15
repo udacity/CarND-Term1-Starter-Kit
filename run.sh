@@ -9,6 +9,6 @@ elif[ "$1" == *".ipynb"* ]
   then
     jupyter notebook "$1"
 else
-    python "$@"
+    exec "$@"
 fi
 
