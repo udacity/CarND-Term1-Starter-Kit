@@ -8,7 +8,7 @@ Python 3 is used for entirety of the nanodegree.
 
 ## MacOS/Linux
 
-Install [base Anaconda](http://conda.pydata.org/miniconda.html) on your machine.
+Install [miniconda](http://conda.pydata.org/miniconda.html) on your machine.
 
 Next, setup the CarND Term1 environment.
 
