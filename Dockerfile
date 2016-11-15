@@ -49,5 +49,5 @@ EXPOSE 4567
 # 1. sources conda environment
 # 2. prevents the zombie container issue when started as pid 1
 COPY run.sh /
-RUN chmod +x run.sh
+RUN chmod +x /run.sh
 ENTRYPOINT ["/run.sh"]
