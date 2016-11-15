@@ -42,6 +42,8 @@ WORKDIR "/src"
 EXPOSE 6006
 # Jupyter
 EXPOSE 8888
+# Flask Server
+EXPOSE 4567
 
 ## Two Birds, One Stone
 # 1. sources conda environment
