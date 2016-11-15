@@ -15,4 +15,14 @@
 # ==============================================================================
 
 . activate CarND-TensorFlow-L2
-jupyter notebook "$@"
+
+if [ -z "$1" ]
+  then
+    jupyter notebook 
+elif[ "$1" == *".ipynb"* ]    
+  then
+    jupyter notebook "$1"
+else
+    python "$@"
+fi
+
