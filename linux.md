@@ -2,9 +2,7 @@
 
 ## Step 1
 
-First, download the most stable version of Docker for Windows from https://docs.docker.com/docker-for-windows
-
-First, follow the instructions to install Docker for your distro from https://docs.docker.com/engine/installation/linux/.
+First, follow the instructions to install Docker for your Linux distribution from https://docs.docker.com/engine/installation/linux/.
 
 ## Step 2
 
