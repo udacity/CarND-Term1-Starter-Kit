@@ -1,4 +1,6 @@
-# CarND-TensorFlow-Lab Docker Install Recipe for Windows 10
+# Windows 10
+### CarND Programming Environment - Installation Instructions
+
 
 ## Step 1
 
