@@ -1,4 +1,6 @@
-# CarND-TensorFlow-Lab Docker Install Recipe for Linux
+# Linux
+### CarND Programming Environment - Installation Instructions
+
 
 ## Step 1
 
