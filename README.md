@@ -1,6 +1,6 @@
 # CarND Term1 Starter Kit
 
-WIP
+**WIP**
 
 Software for Term 1 of the [Udacity Self-Driving Car Engineer Nanodegree](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013).
 
@@ -23,14 +23,14 @@ conda env create -f=environment.yml
 To use:
 
 ```sh
-source activate CarND-Term1 # enter the environment
+source activate carnd-term1 # enter the environment
 source deactivate # exit the environment
 ```
 
 To uninstall:
 
 ```sh
-conda env remove -n CarND-Term1
+conda env remove -n carnd-term1
 # removes cached libraries
 conda clean -tp
 ```
@@ -41,17 +41,19 @@ The current setup only installs the CPU version of TensorFlow. If you wish to us
 
 ## Windows (via Docker)
 
+NOTE: You could also use this Docker container for MacOS or Linux.
+
 In the directory of this repository run the following:
 
 ```sh
 # Builds the docker container. This may take a few minutes.
-docker build -t CarND-Term1 .
+docker build -t carnd-term1 .
 ```
 
 To run the container, navigate to the directory of a project and run the follwing:
 
 ```sh
-docker run -it --rm -p 8888:8888 -v `pwd`:/src CarND-Term1
+docker run -it --rm -p 8888:8888 -v `pwd`:/src carnd-term1
 ```
 
 Let's break this down.
@@ -66,7 +68,7 @@ Let's break this down.
 
 `-v `pwd`:/src` mounts the pwd (present working directory) to the /src directory in the container. Basically, this let's us access files from our local machine on the docker container.
 
-`CarND-Term1` is the name of the container to run.
+`carnd-term1` is the name of the container to run.
 
 To learn more about Docker [visit the docs](https://docs.docker.com/engine/userguide/intro/).
 
