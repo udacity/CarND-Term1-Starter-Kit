@@ -6,9 +6,11 @@
 
 First, download the most stable version of Docker for Windows from https://docs.docker.com/docker-for-windows
 
+**TIP**: Docker for Windows does not currently run on Windows 10 Home Edition.  It requires the Pro, Enterprise, or Education edition.  Read Docker's [What to know before you install](https://docs.docker.com/docker-for-windows/#/what-to-know-before-you-install) document to learn more.
+
 **TIP**: Ensure you have at least 2 GB of free ram. Use the Windows Task Manager to close any programs which are using too much memory.
 
-**TIP**: press OK if prompted to enable Hyper-V during Docker install.
+**TIP**: press OK if prompted to enable Hyper-V during Docker install.  If you have VirtualBox installed, it will no longer work after Hyper-V is enabled.
 
 **TIP**: Restart your computer when prompted.
 
