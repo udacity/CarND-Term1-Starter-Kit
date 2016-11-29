@@ -6,7 +6,6 @@ dependencies:
     - python==3.5.2
     - numpy
     - matplotlib
-    - tensorflow
     - jupyter
     - opencv3
     - pillow
@@ -19,4 +18,5 @@ dependencies:
     - pandas
     - pip:
         - moviepy
+        - tensorflow
         - git+https://github.com/fchollet/keras.git

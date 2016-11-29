@@ -6,10 +6,8 @@ Python 3 is used for entirety of the nanodegree.
 
 There are two ways to get up and running:
 
-1. Docker (MacOS/Linux/Windows)
-2. Anaconda Environment (MacOS/Linux)
-
-TensorFlow doesn't currently natively work on Windows which is why Docker is preferred method.
+1. Docker
+2. Anaconda Environment
 
 ## Docker
 
@@ -39,7 +37,7 @@ If you're on Windows:
 docker run -it --rm -p 8888:8888 -v ${pwd}:/src udacity/carnd-term1-starer-kit
 ```
 
-If you're on Mac or Linux:
+If you're on Mac or Linux or the above command didn't work:
 
 ```sh
 docker run -it --rm -p 8888:8888 -v `pwd`:/src udacity/carnd-term1-starer-kit
