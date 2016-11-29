@@ -1,10 +1,9 @@
-# Linux
+# MacOS
 ### CarND Programming Environment - Installation Instructions
-
 
 ## Step 1
 
-First, follow the instructions to install Docker for your Linux distribution from https://docs.docker.com/engine/installation/linux/.
+First, follow the instructions to install Docker for your Mac from https://docs.docker.com/engine/installation/mac/.
 
 ## Step 2
 
