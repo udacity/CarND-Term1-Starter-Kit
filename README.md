@@ -74,7 +74,7 @@ Next, setup the CarND term 1 environment.
 To install:
 
 ```sh
-git clone https://github.com/domluna/CarND-Term1-Starter-Kit.git
+git clone https://github.com/udacity/CarND-Term1-Starter-Kit.git
 cd CarND-Term1-Starter-Kit
 conda env create -f=environment.yml
 ```
