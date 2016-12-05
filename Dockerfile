@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         rsync \
         software-properties-common \
         unzip \
+        libgtk2.0-0 \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -29,7 +30,9 @@ ENV PATH $PATH:/root/miniconda3/bin/
 COPY environment.yml  .
 RUN conda install --yes pyyaml
 RUN conda env create -f=environment.yml --name carnd_term_1
-RUN conda install --name carnd_term_1 -c conda-forge tensorflow
+
+# cleanup tarballs and downloaded package files
+RUN conda clean -tp -y
 
 # Set up our notebook config.
 COPY jupyter_notebook_config.py /root/.jupyter/

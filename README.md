@@ -1,57 +1,46 @@
-# CarND Term1 Starter Kit
-
-WIP
+# CarND Term1 Starter Kit (WIP, but works pretty well)
 
 Software for Term 1 of the [Udacity Self-Driving Car Engineer Nanodegree](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013).
 
 Python 3 is used for entirety of the nanodegree.
 
-## MacOS/Linux
+There are two ways to get up and running:
 
-Install [miniconda](http://conda.pydata.org/miniconda.html) on your machine.
+1. Docker
+2. Anaconda Environment
 
-Next, setup the CarND Term1 environment.
+## Docker
 
-To install:
+### Download Docker
 
-```sh
-git clone https://github.com/domluna/CarND-Term1-Starter-Kit.git
-cd CarND-Term1-Starter-Kit
-conda env create -f=environment.yml
-```
+Follow the instructions for your OS.
 
-To use:
+* [MacOS](./macos.md)
+* [Linux](./linux.md)
+* [Windows](./windows.md)
 
-```sh
-source activate CarND-Term1 # enter the environment
-source deactivate # exit the environment
-```
+### Building the Image
 
-To uninstall:
+Download the prebuilt image directly from [Docker Hub](https://hub.docker.com/r/udacity/carnd-term1-starter-kit/)
 
 ```sh
-conda env remove -n CarND-Term1
-# removes cached libraries
-conda clean -tp
+docker pull udacity/carnd-term1-starter-kit
 ```
 
-### Install Tensorflow for GPU
-
-The current setup only installs the CPU version of TensorFlow. If you wish to use the GPU version follow the instructions [here](https://www.tensorflow.org/get_started).
-
-## Windows (via Docker)
-
-In the directory of this repository run the following:
-
-```sh
-# Builds the docker container. This may take a few minutes.
-docker build -t CarND-Term1 .
-```
+### Running a Container
 
 To run the container, navigate to the directory of a project and run the follwing:
 
+If you're on Windows:
+
 ```sh
-docker run -it --rm -p 8888:8888 -v `pwd`:/src CarND-Term1
+docker run -it --rm -p 8888:8888 -v ${pwd}:/src udacity/carnd-term1-starer-kit
+```
+
+If you're on Mac or Linux or the above command didn't work:
+
+```sh
+docker run -it --rm -p 8888:8888 -v `pwd`:/src udacity/carnd-term1-starer-kit
 ```
 
 Let's break this down.
@@ -64,9 +53,49 @@ Let's break this down.
 
 `-p 8888:8888` maps port 8888 on our local machine to port 8888 in the Docker container, this allows us to access port 8888 in the container by visiting `localhost:8888`.
 
-`-v `pwd`:/src` mounts the pwd (present working directory) to the /src directory in the container. Basically, this let's us access files from our local machine on the docker container.
+`-v ${pwd}:/src` mounts the pwd (present working directory) to the /src directory in the container. Basically, this let's us access files from our local machine on the docker container.
 
-`CarND-Term1` is the name of the container to run.
+`udacity/carnd-term1-starer-kit` is the name of the container to run.
 
 To learn more about Docker [visit the docs](https://docs.docker.com/engine/userguide/intro/).
 
+### GPU support
+
+The current image does not support GPU use. An image with GPU support is in the works.
+
+## Anaconda
+
+Install [miniconda](http://conda.pydata.org/miniconda.html) on your machine.
+
+Next, setup the CarND term 1 environment.
+
+To install:
+
+```sh
+git clone https://github.com/udacity/CarND-Term1-Starter-Kit.git
+cd CarND-Term1-Starter-Kit
+conda env create -f=environment.yml
+```
+
+To use:
+
+```sh
+source activate carnd-term1 # enter the environment
+source deactivate # exit the environment
+```
+
+To cleanup downloaded libraries (remove tarballs, zip files, etc):
+
+```sh
+conda clean -tp
+```
+
+To uninstall the environment:
+
+```sh
+conda env remove -n carnd-term1
+```
+
+### Install Tensorflow for GPU
+
+The current setup only installs the CPU version of TensorFlow. If you wish to use the GPU version follow the instructions [here](https://www.tensorflow.org/get_started).
