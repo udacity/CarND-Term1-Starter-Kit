@@ -1,22 +1,25 @@
-# Linux
+# Docker for Mac
 ### CarND Programming Environment - Installation Instructions
 
+## Step 1: Install Docker
 
-## Step 1
+First, follow the instructions to install Docker for your Mac from https://docs.docker.com/docker-for-mac/.
 
-First, follow the instructions to install Docker for your Linux distribution from https://docs.docker.com/engine/installation/linux/.
+The Stable Channel is recommended.
 
-## Step 2
+## Step 2: `docker run hello-world`
 
 This step ensures Docker is installed properly on your computer.
 
-Launch `Terminal` and type the following at the prompt to download and launch the `hello-world` Docker container (https://hub.docker.com/_/hello-world/):
+Launch `bash` (Terminal or ITerm 2) and type the following at the prompt.
+This will implicitly pull and then and run the `hello-world` Docker image
+(https://hub.docker.com/_/hello-world/) in a new container:
 
-```
-docker run hello-world
+```sh
+$ docker run hello-world
 ```
 
-You should now see the following confirming successful installation: 
+You should now see the following confirming successful installation:
 
 ```
 docker run hello-world
@@ -38,4 +41,4 @@ To generate this message, Docker took the following steps:
     to your terminal.
 ```
 
-**NOTE**: No need to try something more ambitious. We have bigger fish to fry below. XD
+That's it!!

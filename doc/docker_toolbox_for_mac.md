@@ -1,21 +1,27 @@
-# MacOS
+# Docker Toolbox for Mac
 ### CarND Programming Environment - Installation Instructions
 
-## Step 1
+## Step 1: Download Docker
 
-First, follow the instructions to install Docker for your Mac from https://docs.docker.com/engine/installation/mac/.
+[Download](https://github.com/docker/toolbox/releases/download/v1.12.3/DockerToolbox-1.12.3.pkg)
+Docker Toolbox for Mac
 
-## Step 2
+Make sure that VirtualBox is installed as part of the process.
+
+
+## Step 2: `docker run hello-world`
 
 This step ensures Docker is installed properly on your computer.
 
-Launch `Terminal` and type the following at the prompt to download and launch the `hello-world` Docker container (https://hub.docker.com/_/hello-world/):
+Launch Docker Quickstart Terminal and type the following at the prompt.
+This will implicitly pull and then and run the `hello-world` Docker image
+(https://hub.docker.com/_/hello-world/) in a new container:
 
-```
-docker run hello-world
+```sh
+$ docker run hello-world
 ```
 
-You should now see the following confirming successful installation: 
+You should now see the following confirming successful installation:
 
 ```
 docker run hello-world
@@ -37,4 +43,4 @@ To generate this message, Docker took the following steps:
     to your terminal.
 ```
 
-**NOTE**: No need to try something more ambitious. We have bigger fish to fry below. XD
+That's it!!
