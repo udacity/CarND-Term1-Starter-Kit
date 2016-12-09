@@ -75,13 +75,13 @@ differently based on your shell.
 If you're using `Windows PowerShell`:
 
 ```sh
-docker run -it --rm -p 8888:8888 -v ${pwd}:/src udacity/carnd-term1-starer-kit
+docker run -it --rm -p 8888:8888 -v ${pwd}:/src udacity/carnd-term1-starter-kit
 ```
 
 If you're using `bash` or Docker Quickstart Terminal:
 
 ```sh
-docker run -it --rm -p 8888:8888 -v `pwd`:/src udacity/carnd-term1-starer-kit
+docker run -it --rm -p 8888:8888 -v `pwd`:/src udacity/carnd-term1-starter-kit
 ```
 
 Let's break this down.
