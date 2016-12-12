@@ -24,8 +24,10 @@ conda env create -f=environment.yml
 To use:
 
 ```sh
-source activate carnd-term1 # enter the environment
-source deactivate # exit the environment
+# Enter the environment, should be called before you plan to work on a project (unless already active)
+source activate carnd-term1
+# Exit the environment
+source deactivate
 ```
 
 To cleanup downloaded libraries (remove tarballs, zip files, etc):
