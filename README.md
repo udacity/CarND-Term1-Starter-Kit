@@ -1,13 +1,48 @@
 # CarND Term1 Starter Kit (WIP, but works pretty well)
 
-Software for Term 1 of the [Udacity Self-Driving Car Engineer Nanodegree](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013).
-
-Python 3 is used for entirety of the nanodegree.
+Software for Term 1 of the [Udacity Self-Driving Car Engineer Nanodegree](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013). Python 3 is used for entirety of term 1.
 
 There are two ways to get up and running:
 
-1. Docker
-2. Anaconda Environment
+1. [Anaconda Environment](#Anaconda)
+2. [Docker](#Docker)
+
+## Anaconda
+
+Install [miniconda](http://conda.pydata.org/miniconda.html) on your machine.
+
+Next, setup the CarND term 1 environment.
+
+To install:
+
+```sh
+git clone https://github.com/udacity/CarND-Term1-Starter-Kit.git
+cd CarND-Term1-Starter-Kit
+conda env create -f=environment.yml
+```
+
+To use:
+
+```sh
+source activate carnd-term1 # enter the environment
+source deactivate # exit the environment
+```
+
+To cleanup downloaded libraries (remove tarballs, zip files, etc):
+
+```sh
+conda clean -tp
+```
+
+To uninstall the environment:
+
+```sh
+conda env remove -n carnd-term1
+```
+
+### Install Tensorflow for GPU
+
+The current setup only installs the CPU version of TensorFlow. If you wish to use the GPU version follow the instructions [here](https://www.tensorflow.org/get_started).
 
 ## Docker
 
@@ -108,43 +143,6 @@ To learn more about Docker [visit the docs](https://docs.docker.com/engine/userg
 
 ### GPU support
 
-The current image does not support GPU use. An image with GPU support is in the works.
-
-## Anaconda
-
-Install [miniconda](http://conda.pydata.org/miniconda.html) on your machine.
-
-Next, setup the CarND term 1 environment.
-
-To install:
-
-```sh
-git clone https://github.com/udacity/CarND-Term1-Starter-Kit.git
-cd CarND-Term1-Starter-Kit
-conda env create -f=environment.yml
-```
-
-To use:
-
-```sh
-source activate carnd-term1 # enter the environment
-source deactivate # exit the environment
-```
-
-To cleanup downloaded libraries (remove tarballs, zip files, etc):
-
-```sh
-conda clean -tp
-```
-
-To uninstall the environment:
-
-```sh
-conda env remove -n carnd-term1
-```
-
-### Install Tensorflow for GPU
-
-The current setup only installs the CPU version of TensorFlow. If you wish to use the GPU version follow the instructions [here](https://www.tensorflow.org/get_started).
+The current image does not support GPU use. An image with GPU support is in the works although this would only work with a Linux base OS.
 
 [carnd_docker_hub]: https://hub.docker.com/r/udacity/carnd-term1-starter-kit/
