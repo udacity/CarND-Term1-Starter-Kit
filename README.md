@@ -4,8 +4,8 @@ Software for Term 1 of the [Udacity Self-Driving Car Engineer Nanodegree](https:
 
 There are two ways to get up and running:
 
-1. [Anaconda Environment](#Anaconda)
-2. [Docker](#Docker)
+1. [Anaconda Environment](#anaconda)
+2. [Docker](#docker)
 
 ## Anaconda
 
