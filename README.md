@@ -1,4 +1,4 @@
-# CarND Term1 Starter Kit (WIP, but works pretty well)
+# CarND Term1 Starter Kit
 
 Software for Term 1 of the [Udacity Self-Driving Car Engineer Nanodegree](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013). Python 3 is used for entirety of term 1.
 
