@@ -20,7 +20,7 @@ To install:
 ```sh
 git clone https://github.com/udacity/CarND-Term1-Starter-Kit.git
 cd CarND-Term1-Starter-Kit
-conda env create -f=environment.yml
+conda env create -f environment.yml
 ```
 
 To use:
