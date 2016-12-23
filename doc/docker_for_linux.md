@@ -1,7 +1,6 @@
 # Docker for Linux
 ### CarND Programming Environment - Installation Instructions
 
-
 ## Step 1: Install Docker
 
 First, follow the instructions to install Docker for your Linux distribution from
