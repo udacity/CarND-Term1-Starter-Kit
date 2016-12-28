@@ -1,90 +1,134 @@
 # Docker For AWS
 
-1. using CPU
-1. using GPU
+### AWS Credentials
 
-## Steps to Implementation
+Prior to following this tutorial, you will need to have configured your AWS
+command line interface [with the proper credentials](aws_configure_credentials.md). 
 
-### Local Work Prior to Deploying to AWS
+### `aws` Command Line Interface
+
+You will also need to have the `aws` command line interface installed. You can
+do that using `pip` by [following these instructions](http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-with-pip).
+
+## GPU on AWS
+
+The general workflow herein supported consists of the following:
+
+1. Do development work on your project locally using the standard docker image
+1. Sync this work with your github account
+1. Start a new GPU instance on AWS using `docker-machine` with its built-in EC2 
+   driver
+1. SSH into the GPU instance using `docker-machine`
+1. Use `nvidia-docker` tool to run the GPU configured docker image
+
+
+### Local Development & Sync with Github
+
+Note that this means sync to your personal github account. 
+
 1. Develop your work locally and manage it using `git`
-    - develop your work locally using your standard workflow (python modules/scripts, jupyter notebook)
+    - develop your work locally using your standard workflow 
+      (python modules/scripts, jupyter notebook)
     - `git add -A && git commit -m 'Standard commit message'`
 1. Push local changes to github
     - `git push`
-1. Write a `Dockerfile` to implement your own Docker Image
-    - add a layer to the Udacity image that contains your work
-    ```
-    FROM udacity/carnd-term1-starter-kit
-    RUN git clone https://github.com/#YOUR_USERNAME#/#YOUR_REPO#.git
-    ```
-1. Build the `Dockerfile` for your own Docker Image
-   - `$ docker build -t my_carnd_image .` 
-   - Make sure you include everything here, the period `.` included.
 
-### Create a Machine on AWS
+### Start a new GPU instance
 
-We will be using `docker-machine` with its built-in EC2 driver to create a machine on Amazon Web Services 
-that is ready to run our Docker image remotely. We will then configure our `docker` command line tool to point
-at this machine and run a container based upon the image you just built.
+**WARNING:** This is the phase at which you will start to accrue costs. Running
+this command will start a GPU instance on AWS. 
 
-#### `aws` Command Line Interface
+To manage your GPU instance, you will be using three basic commands:
 
-It is recommended that you have the `aws` command line interface installed. You can do that using `pip` by 
-[folliwing these instructions](http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-with-pip).
+1. `docker-machine create`
+   - creates a new docker host machine
+1. `docker-machine ls`
+   - lists all running docker host machines
+1. `docker-machine rm`
+   - removes a docker host machine 
+   
+**Make sure not to leave your GPU instance running. Always use `docker-machine rm` 
+to destroy your instance when you are not using it.**  
 
-#### AWS Credentials
+1. [Configure the `jupyter` security group](aws_create_security_group.md).
 
-You will need to make sure that you have your AWS credentials stored in a `~/.aws/credentials`. This will
-most likely look something like
-
-```
-[default]
-aws_access_key_id = AKID1234567890
-aws_secret_access_key = MY-SECRET-KEY
-```
-
-If you have installed the command line interface, you can configure your system easily using
-
-```
-$ aws configure
-```
-
-More details with regard to this can be found [here](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html).
-
-Verify your credentials by listing your running EC2 instances using
-
-```
-aws ec2 describe-instances
-```
-
-1. Create a new Docker Machine on AWS
+1. Create an EC2 GPU instance. 
 
    ```
-   $ docker-machine create --driver amazonec2 aws-sandbox
+   docker-machine create --driver amazonec2 \
+                         --amazonec2-region us-west-2 \
+                         --amazonec2-ami ami-a9d276c9 \
+                         --amazonec2-security-group jupyter \
+                         --amazonec2-instance-type g2.2xlarge \
+                         udacity-carnd-gpu
    ```
-
-1. Connect your `docker` client to the remote AWS instance
-
+   
+   You may run into the error:
+   
    ```
-   $ eval $(docker-machine env aws-sandbox)
+   Error with pre-create check: "There is already a keypair with the name 
+   udacity-carnd-gpu. Please either remove that keypair or use a different 
+   machine name."
    ```
+   
+   This is an error with AWS. You can either change the name you wish to use or 
+   navigate to *EC2 > Network & Security > Key Pairs* and remove the key pair
+   with the conflicting name. 
+   
+1. Provision your new EC2 GPU instance for running `nvidia-docker`
 
-1. Find the IP address of your AWS container
+If you create a custom [AMI]
+(http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html), you can skip steps
+2 and 3 in the future.
 
-   ```
-   $ docker-machine ip aws-sandbox
-   ```
+   1. SSH into your instance
+   
+      ```
+      (LOCAL) $ docker-machine ssh udacity-carnd-GPU
+      ``` 
+   1. Configure your instance for `nvidia-docker`
+   
+      ```
+      (EC2-GPU) $ sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
+      (EC2-GPU) $ sudo sh -c 'echo "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64 /" > /etc/apt/sources.list.d/cuda.list'
+      (EC2-GPU) $ sudo apt-get update && sudo apt-get install -y --no-install-recommends cuda-drivers
+      ```
 
-1. View your running machine
+   1. Install nvidia-docker and nvidia-docker-plugin
+   
+      ```
+      (EC2-GPU) $ wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.0-rc.3/nvidia-docker_1.0.0.rc.3-1_amd64.deb
+      (EC2-GPU) $ sudo dpkg -i /tmp/nvidia-docker*.deb && rm /tmp/nvidia-docker*.deb
+      ```
+      
+   1. Run the test image
+   
+      ```
+      (EC2-GPU) $ sudo nvidia-docker run --rm nvidia/cuda nvidia-smi
+      ```
+      
+      After the image is finished pulling, you should see the following:
+      
+      ```
+      Status: Downloaded newer image for nvidia/cuda:latest
+      Wed Dec 28 00:04:07 2016
+      +-----------------------------------------------------------------------------+
+      | NVIDIA-SMI 367.57                 Driver Version: 367.57                    |
+      |-------------------------------+----------------------+----------------------+
+      | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+      | Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+      |===============================+======================+======================|
+      |   0  GRID K520           Off  | 0000:00:03.0     Off |                  N/A |
+      | N/A   29C    P8    18W / 125W |      0MiB /  4036MiB |      0%      Default |
+      +-------------------------------+----------------------+----------------------+
+      
+      +-----------------------------------------------------------------------------+
+      | Processes:                                                       GPU Memory |
+      |  GPU       PID  Type  Process name                               Usage      |
+      |=============================================================================|
+      |  No running processes found                                                 |
+      +-----------------------------------------------------------------------------+
+      ```
 
-   ```
-   $ docker-machine ls
-   ```
+1. Use `nvidia-docker` to launch a new carnd image with GPU support.
 
-1. Run an instance of your Docker Image on AWS
-
-   ```
-   $ docker run  ...
-   ```
-
-1. Run and Develop your work remotely on AWS and manage it using `git`
