@@ -31,6 +31,11 @@ COPY environment.yml  .
 RUN conda install --yes pyyaml
 RUN conda env create -f=environment.yml --name carnd_term_1
 
+# Install ffmpeg
+RUN pip install imageio
+COPY ffmpeg.py .
+RUN python -m ffmpeg
+
 # cleanup tarballs and downloaded package files
 RUN conda clean -tp -y
 

@@ -154,3 +154,4 @@ To learn more about Docker [visit the docs](https://docs.docker.com/engine/userg
 The current image does not support GPU use. An image with GPU support is in the works although this would only work with a Linux base OS.
 
 [carnd_docker_hub]: https://hub.docker.com/r/udacity/carnd-term1-starter-kit/
+
