@@ -1,6 +1,5 @@
-# [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/sdc-banner-medium-1170_660.png)](http://www.udacity.com/drive)
-
 # CarND Term1 Starter Kit
+[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 Software for Term 1 of the [Udacity Self-Driving Car Engineer Nanodegree](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013). Python 3 is used for entirety of term 1.
 
@@ -20,8 +19,13 @@ To install:
 ```sh
 git clone https://github.com/udacity/CarND-Term1-Starter-Kit.git
 cd CarND-Term1-Starter-Kit
-conda env create -f=environment.yml
+conda env create -f environment.yml
 ```
+Verify that the carnd-term1 environment was created in your environments:
+```sh
+conda info --envs
+```
+If the carnd-term1 environment is not listed, make sure that the environment.yml file exists in your directory "..\\CarND-Term1-Starter-Kit". If it does not exist there, the previous conda command (conda env create -f environment.yml) won't create the carnd-term1 environment. You can manually add the environment.yml file by downloading it from the git repository (https://github.com/udacity/CarND-Term1-Starter-Kit/) using your browser and adding the file to the directory "..\\CarND-Term1-Starter-Kit". Perform the conda command "conda env create -f environment.yml" again if necessary.
 
 To use:
 
