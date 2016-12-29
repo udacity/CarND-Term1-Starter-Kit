@@ -7,9 +7,9 @@ Python 3 is used for entirety of term 1.
 
 There are two ways to get up and running:
 
-## [Anaconda Environment](http://conda.pydata.org/docs/)  
+## [Anaconda Environment](doc/configure_via_anaconda.md)
 
-Get started [here](docs/configure_via_anaconda.md)
+Get started [here](doc/configure_via_anaconda.md). More info [here](http://conda.pydata.org/docs/).
 
 | Supported Systems | Pros                         | Cons                                               |
 |-------------------|------------------------------|----------------------------------------------------|
@@ -17,9 +17,9 @@ Get started [here](docs/configure_via_anaconda.md)
 | Mac (CPU)         | more community support       | no C++ Support in this project (needed for Term 2) |
 | Windows (CPU)     | more heavily adopted         | implementation is local and OS specific            |
 
-## [Docker](http://docker.com)  
+## [Docker](doc/configured_via_docker.md)
 
-Get started [here](docs/configured_via_docker.md)
+Get started [here](doc/configured_via_docker.md). More info [here](http://docker.com).
 
 | Supported Systems | Pros                                | Cons                                 |
 |-------------------|-------------------------------------|--------------------------------------|
