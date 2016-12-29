@@ -15,8 +15,7 @@ There are two ways to get up and running:
          - Windows (CPU) 
      - pros:
          - more straight-forward to use
-         - older technology
-             - more community support (stack exchange, etc)
+         - older technology; more community support (stack exchange, etc)
          - more heavily adopted
      - cons:
          - no GPU support in this project
@@ -32,11 +31,9 @@ There are two ways to get up and running:
         - Mac (CPU)
         - Windows (CPU)
     - pros: 
-        - platform agnostic
-            - allows you to develop in the exact same way regardless of OS or whether you are local or remote
+        - platform agnostic; allows you to develop in the exact same way regardless of OS or whether you are local or remote
         - GPU support
         - AWS support
     - cons:
         - more challenging to use
-        - newer technology
-            - less community support
+        - newer technology; less community support
