@@ -27,7 +27,7 @@ conda info --envs
 ```
 If the carnd-term1 environment is not listed, make sure that the environment.yml file exists in your directory "..\\CarND-Term1-Starter-Kit". If it does not exist there, the previous conda command (conda env create -f environment.yml) won't create the carnd-term1 environment. You can manually add the environment.yml file by downloading it from the git repository (https://github.com/udacity/CarND-Term1-Starter-Kit/) using your browser and adding the file to the directory "..\\CarND-Term1-Starter-Kit". Perform the conda command "conda env create -f environment.yml" again if necessary.
 
-To use:
+To use (NOTE: on Windows it might be just `activate` instead of `source activate` depending on the console):
 
 ```sh
 # Enter the environment, should be called before you plan to work on a project (unless already active)
