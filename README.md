@@ -7,21 +7,23 @@ Python 3 is used for entirety of term 1.
 
 There are two ways to get up and running:
 
-1. [Anaconda Environment](http://conda.pydata.org/docs/)  
-    Get started [here](docs/configure_via_anaconda.md)
-    
-    | Supported Systems | Pros                         | Cons                                               |
-    |-------------------|------------------------------|----------------------------------------------------|
-    | Linux (CPU)       | more straight-forward to use | no AWS or GPU Support in this project              |
-    | Mac (CPU)         | more community support       | no C++ Support in this project (needed for Term 2) |
-    | Windows (CPU)     | more heavily adopted         | implementation is local and OS specific            |
+## [Anaconda Environment](http://conda.pydata.org/docs/)  
 
-2. [Docker](http://docker.com)  
-    Get started [here](docs/configured_via_docker.md)
-    
-    | Supported Systems | Pros                                | Cons                                 |
-    |-------------------|-------------------------------------|--------------------------------------|
-    | AWS (CPU, GPU)    | configure once for all environments | more challenging to use              |
-    | Linux (CPU, GPU)  | AWS, GPU Support                    | less community support               |
-    | Mac (CPU)         | practice with `git` and `docker`    | have to manage images and containers |
-    | Windows (CPU)     |                                     |                                      |
+Get started [here](docs/configure_via_anaconda.md)
+
+| Supported Systems | Pros                         | Cons                                               |
+|-------------------|------------------------------|----------------------------------------------------|
+| Linux (CPU)       | more straight-forward to use | no AWS or GPU Support in this project              |
+| Mac (CPU)         | more community support       | no C++ Support in this project (needed for Term 2) |
+| Windows (CPU)     | more heavily adopted         | implementation is local and OS specific            |
+
+## [Docker](http://docker.com)  
+
+Get started [here](docs/configured_via_docker.md)
+
+| Supported Systems | Pros                                | Cons                                 |
+|-------------------|-------------------------------------|--------------------------------------|
+| AWS (CPU, GPU)    | configure once for all environments | more challenging to use              |
+| Linux (CPU, GPU)  | AWS, GPU Support                    | less community support               |
+| Mac (CPU)         | practice with `git` and `docker`    | have to manage images and containers |
+| Windows (CPU)     |                                     |                                      |
