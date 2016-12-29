@@ -9,10 +9,10 @@ There are two ways to get up and running:
 
 1. [Anaconda Environment](http://conda.pydata.org/docs/)  
     Get started [here](docs/configure_via_anaconda.md)
-    - Supported Systems: 
+    - Supported Systems:
          - Linux (CPU)
          - Mac (CPU)
-         - Windows (CPU) 
+         - Windows (CPU)
      - pros:
          - more straight-forward to use
          - older technology; more community support (stack exchange, etc)
@@ -25,12 +25,12 @@ There are two ways to get up and running:
          - work must be repeated in each computing environment (local, remote, etc)
 2. [Docker](http://docker.com)  
     Get started [here](docs/configured_via_docker.md)
-    - Supported Systems: 
+    - Supported Systems:
         - Amazon Web Services (CPU, GPU)
         - Linux (CPU, GPU)
         - Mac (CPU)
         - Windows (CPU)
-    - pros: 
+    - pros:
         - platform agnostic; allows you to develop in the exact same way regardless of OS or whether you are local or remote
         - GPU support
         - AWS support
