@@ -6,35 +6,52 @@ Software for Term 1 of the [Udacity Self-Driving Car Engineer Nanodegree](https:
 There are two ways to get up and running:
 
 1. [Anaconda Environment](#anaconda)
+    - Supported Systems: 
+         - Linux (CPU)
+         - Mac (CPU)
+         - Windows (CPU) 
 2. [Docker](#docker)
+    - Supported Systems: 
+        - Amazon Web Services (CPU, GPU)
+        - Linux (CPU, GPU)
+        - Mac (CPU)
+        - Windows (CPU)
 
+<a name='anaconda'></a>
 ## Anaconda
+
+Using Anaconda to run your code consists of the following:
+
+1. Install miniconda on your computer
+2. Create a new `conda` environment to run your code 
+3. Each time you wish to work, activate your `conda` environment
+
+**Note:** Configuring TensorFlow for a GPU is not supported for use with Anaconda. 
+
+### Installation
+
+#### Install `miniconda`
 
 Install [miniconda](http://conda.pydata.org/miniconda.html) on your machine.
 
+#### Setup `conda` environment 
 Next, setup the CarND term 1 environment.
-
-To install:
 
 ```sh
 git clone https://github.com/udacity/CarND-Term1-Starter-Kit.git
 cd CarND-Term1-Starter-Kit
 conda env create -f environment.yml
 ```
+
+#### Verify `conda` environment
+
 Verify that the carnd-term1 environment was created in your environments:
+
 ```sh
 conda info --envs
 ```
-If the carnd-term1 environment is not listed, make sure that the environment.yml file exists in your directory "..\\CarND-Term1-Starter-Kit". If it does not exist there, the previous conda command (conda env create -f environment.yml) won't create the carnd-term1 environment. You can manually add the environment.yml file by downloading it from the git repository (https://github.com/udacity/CarND-Term1-Starter-Kit/) using your browser and adding the file to the directory "..\\CarND-Term1-Starter-Kit". Perform the conda command "conda env create -f environment.yml" again if necessary.
 
-To use:
-
-```sh
-# Enter the environment, should be called before you plan to work on a project (unless already active)
-source activate carnd-term1
-# Exit the environment
-source deactivate
-```
+#### Cleanup downloaded libraries
 
 To cleanup downloaded libraries (remove tarballs, zip files, etc):
 
@@ -42,25 +59,34 @@ To cleanup downloaded libraries (remove tarballs, zip files, etc):
 conda clean -tp
 ```
 
+#### Uninstalling 
+
 To uninstall the environment:
 
 ```sh
 conda env remove -n carnd-term1
 ```
 
-### Install Tensorflow for GPU
+### Using Anaconda
 
-The current setup only installs the CPU version of TensorFlow. If you wish to use the GPU version follow the instructions [here](https://www.tensorflow.org/get_started).
+The `carnd-term1` environment must be active in your current terminal **each** time you begin working. To exit the environment when you have completed your work session, simply close the terminal window.
 
+#### Activate `carnd-term1` environment
+
+```sh
+$ source activate carnd-term1
+```
+
+<a name="docker"></a>
 ## Docker
 
 Using Docker to run your code consists of the following:
 
 1. Install Docker on your computer
 2. Pull the precompiled Docker image from Docker Hub
-3. Run the image as a new container
+3. Each time you wish to work, run the image as a new container
 
-You may also wish to run a [python module][doc/py_mod.md] or [ipython][doc/ipython.md].
+You may also wish to run a [python module](doc/py_mod.md) or [ipython](doc/ipython.md).
 
 ### Install Docker On Your Computer
 
