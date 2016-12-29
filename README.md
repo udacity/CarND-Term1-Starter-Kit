@@ -9,31 +9,19 @@ There are two ways to get up and running:
 
 1. [Anaconda Environment](http://conda.pydata.org/docs/)  
     Get started [here](docs/configure_via_anaconda.md)
-    - Supported Systems:
-         - Linux (CPU)
-         - Mac (CPU)
-         - Windows (CPU)
-     - pros:
-         - more straight-forward to use
-         - older technology; more community support (stack exchange, etc)
-         - more heavily adopted
-     - cons:
-         - no GPU support in this project
-         - no AWS support in this project
-         - no C++ support in this project (not important until Term 2)
-         - implementation is OS specific
-         - work must be repeated in each computing environment (local, remote, etc)
+    
+    | Supported Systems | Pros                         | Cons                                               |
+    |-------------------|------------------------------|----------------------------------------------------|
+    | Linux (CPU)       | more straight-forward to use | no AWS or GPU Support in this project              |
+    | Mac (CPU)         | more community support       | no C++ Support in this project (needed for Term 2) |
+    | Windows (CPU)     | more heavily adopted         | implementation is local and OS specific            |
+
 2. [Docker](http://docker.com)  
     Get started [here](docs/configured_via_docker.md)
-    - Supported Systems:
-        - Amazon Web Services (CPU, GPU)
-        - Linux (CPU, GPU)
-        - Mac (CPU)
-        - Windows (CPU)
-    - pros:
-        - platform agnostic; allows you to develop in the exact same way regardless of OS or whether you are local or remote
-        - GPU support
-        - AWS support
-    - cons:
-        - more challenging to use
-        - newer technology; less community support
+    
+    | Supported Systems | Pros                                | Cons                                 |
+    |-------------------|-------------------------------------|--------------------------------------|
+    | AWS (CPU, GPU)    | configure once for all environments | more challenging to use              |
+    | Linux (CPU, GPU)  | AWS, GPU Support                    | less community support               |
+    | Mac (CPU)         | practice with `git` and `docker`    | have to manage images and containers |
+    | Windows (CPU)     |                                     |                                      |
