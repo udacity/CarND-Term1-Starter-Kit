@@ -19,7 +19,7 @@ Get started [here](doc/configure_via_anaconda.md). More info [here](http://conda
 
 ## [Docker](doc/configure_via_docker.md)
 
-Get started [here](doc/configured_via_docker.md). More info [here](http://docker.com).
+Get started [here](doc/configure_via_docker.md). More info [here](http://docker.com).
 
 | Supported Systems | Pros                                | Cons                                 |
 |-------------------|-------------------------------------|--------------------------------------|
