@@ -17,7 +17,7 @@ Get started [here](doc/configure_via_anaconda.md). More info [here](http://conda
 | Mac (CPU)         | more community support       | implementation is local and OS specific            |
 | Windows (CPU)     | more heavily adopted         |                                                    |
 
-## [Docker](doc/configured_via_docker.md)
+## [Docker](doc/configure_via_docker.md)
 
 Get started [here](doc/configured_via_docker.md). More info [here](http://docker.com).
 
