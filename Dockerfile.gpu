@@ -29,7 +29,7 @@ ENV PATH $PATH:/root/miniconda3/bin/
 
 COPY environment.yml  .
 RUN conda install --yes pyyaml
-RUN conda env create -f=environment.yml --name carnd_term_1
+RUN conda env create -f=environment.yml --name carnd-term1
 
 # Install ffmpeg
 RUN pip install imageio
