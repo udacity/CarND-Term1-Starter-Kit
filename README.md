@@ -11,19 +11,23 @@ There are two ways to get up and running:
 
 Get started [here](doc/configure_via_anaconda.md). More info [here](http://conda.pydata.org/docs/).
 
-| Supported Systems | Pros                         | Cons                                               |
-|-------------------|------------------------------|----------------------------------------------------|
-| Linux (CPU)       | more straight-forward to use | no AWS or GPU Support in this project              |
-| Mac (CPU)         | more community support       | implementation is local and OS specific            |
-| Windows (CPU)     | more heavily adopted         |                                                    |
+Supported Sytems: Linux (CPU), Mac (CPU), Windows (CPU)     
+
+| Pros                         | Cons                                               |
+|------------------------------|----------------------------------------------------|
+| more straight-forward to use | no AWS or GPU Support in this project              |
+| more community support       | implementation is local and OS specific            |
+| more heavily adopted         |                                                    |
 
 ## [Docker](doc/configure_via_docker.md)
 
 Get started [here](doc/configure_via_docker.md). More info [here](http://docker.com).
 
-| Supported Systems | Pros                                | Cons                                 |
-|-------------------|-------------------------------------|--------------------------------------|
-| AWS (CPU, GPU)    | configure once for all environments | more challenging to use              |
-| Linux (CPU, GPU)  | AWS, GPU Support                    | less community support               |
-| Mac (CPU)         | practice with `git` and `docker`    | have to manage images and containers |
-| Windows (CPU)     |                                     |                                      |
+Supported Systems : AWS (CPU, [GPU](doc/docker_for_aws.md)), Linux (CPU), Mac (CPU), Windows (CPU)     
+
+| Pros                                | Cons                                 |
+|-------------------------------------|--------------------------------------|
+| configure once for all environments | more challenging to use              |
+| AWS, GPU Support                    | less community support               |
+| practice with `git` and `docker`    | have to manage images and containers |
+|                                     |                                      |
