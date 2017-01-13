@@ -1,44 +1,42 @@
-# Configure via Docker
+# Configure and Manage Your Environment with Docker
+
+Per the Docker [docs](https://www.docker.com/what-docker):
+
+> Docker containers wrap a piece of software in a complete filesystem that contains everything needed to run: code, runtime, system tools, system libraries – anything that can be installed on a server. This guarantees that the software will always run the same, regardless of its environment.
+
+## Overview
 
 Using Docker to run your code consists of the following:
 
-1. Install Docker on your computer
+1. Install Docker on your computer or a remote system
 2. Pull the precompiled Docker image from Docker Hub
 3. Each time you wish to work, run the image as a new container
 
-You may also wish to run a [python module](doc/py_mod.md) or [ipython](doc/ipython.md).
+The tricky part to working with Docker will be accessing your project code while working with a Python process (via Jupyter, Python, or IPython) running in a container. 
+
+---
+
 
 ### Install Docker On Your Computer
 
 Instructions for installation very by operating system and version.
 
-OS Specific instructions can be found below:
 
-- Docker for Linux
-   - [Linux](doc/docker_for_linux.md)
-- Docker for Mac
-   - [MacOS >= 10.10.3 (Yosemite)](doc/docker_for_mac.md)
-- Docker Toolbox for Max
-   - [MacOS >= 10.8 (Mountain Lion)](doc/docker_toolbox_for_mac.md)
-- Docker for Windows
-   - [Windows 10 Pro, Enterprise, or Education](doc/docker_for_windows.md)
-- Docker Toolbox for Windows
-   - [Windows 7, 8, 8.1, or 10 Home ](doc/docker_toolbox_for_windows.md)
 
-**Recommended Shell:**
+| OS                                       | Installation<br>Instruction               | Docker System               | Shell                      | Access Jupyter at |
+|:-----------------------------------------|:-----------------------------------------:|:----------------------------|:--------------------------:|:-----------------:|
+| Linux                                    | [Here](doc/docker_for_linux.md)           | Docker for Linux            | `bash`                     | `localhost:8888`  |
+| MacOS <br>>= 10.10.3 (Yosemite)              | [Here](doc/docker_for_mac.md)             | Docker for Mac              | `bash`                     | `localhost:8888`  |
+| MacOS <br>>= 10.8 (Mountain Lion)            | [Here](doc/docker_toolbox_for_mac.md)     | Docker Toolbox for Max      | Docker Quickstart Terminal | `#DOCKERIP:8888`  |
+| Windows <br>10 Pro, Enterprise, or Education | [Here](doc/docker_for_windows.md)         | Docker for Windows          | `Windows PowerShell`       | `localhost:8888`  |
+| Windows <br>7, 8, 8.1, or 10 Home            | [Here](doc/docker_toolbox_for_windows.md) | Docker Toolbox for Windows  | Docker Quickstart Terminal | `#DOCKERIP:8888`  |
 
-| OS                                       | Docker System               | Shell                      | Access Jupyter at |
-|:-----------------------------------------|:----------------------------|:--------------------------:|:-----------------:|
-| Linux                                    | Docker for Linux            | `bash`                     | `localhost:8888`  |
-| MacOS >= 10.10.3 (Yosemite)              | Docker for Mac              | `bash`                     | `localhost:8888`  |
-| MacOS >= 10.8 (Mountain Lion)            | Docker Toolbox for Max      | Docker Quickstart Terminal | `#DOCKERIP:8888`  |
-| Windows 10 Pro, Enterprise, or Education | Docker for Windows          | `Windows PowerShell`       | `localhost:8888`  |
-| Windows 7, 8, 8.1, or 10 Home            | Docker Toolbox for Windows  | Docker Quickstart Terminal | `#DOCKERIP:8888`  |
+---
 
 ### Pull the Precompiled Docker Image from Docker Hub
 
-A precompiled image with all dependencies required for the first term is
-available on [Docker Hub][carnd_docker_hub].
+A precompiled image with all dependencies required for the first 
+term is available on [Docker Hub][carnd_docker_hub].
 
 Once you have docker working, pull the image using the following command:
 

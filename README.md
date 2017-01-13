@@ -14,8 +14,8 @@ Get started [here](doc/configure_via_anaconda.md). More info [here](http://conda
 | Supported Systems | Pros                         | Cons                                               |
 |-------------------|------------------------------|----------------------------------------------------|
 | Linux (CPU)       | more straight-forward to use | no AWS or GPU Support in this project              |
-| Mac (CPU)         | more community support       | no C++ Support in this project (needed for Term 2) |
-| Windows (CPU)     | more heavily adopted         | implementation is local and OS specific            |
+| Mac (CPU)         | more community support       | implementation is local and OS specific            |
+| Windows (CPU)     | more heavily adopted         |                                                    |
 
 ## [Docker](doc/configured_via_docker.md)
 
