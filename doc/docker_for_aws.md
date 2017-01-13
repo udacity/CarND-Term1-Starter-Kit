@@ -77,9 +77,8 @@ to destroy your instance when you are not using it.**
    
 1. Provision your new EC2 GPU instance for running `nvidia-docker`
 
-If you create a custom [AMI]
-(http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html), you can skip steps
-2 and 3 in the future.
+   If you create a custom [AMI](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html), you can skip steps
+   2 and 3 in the future.
 
    1. SSH into your instance
    
@@ -129,6 +128,6 @@ If you create a custom [AMI]
       |  No running processes found                                                 |
       +-----------------------------------------------------------------------------+
       ```
-
 1. Use `nvidia-docker` to launch a new carnd image with GPU support.
+
 
