@@ -14,6 +14,10 @@ Using Docker to run your code consists of the following:
 
 The tricky part to working with Docker will be accessing your project code while working with a Python process (via Jupyter, Python, or IPython) running in a container. 
 
+### GPU support
+
+GPU Support is available for AWS using `nvidia-docker`. Start [here](doc/docker_for_aws.md). 
+
 ---
 
 
@@ -92,10 +96,6 @@ from our local machine on the docker container.
 `udacity/carnd-term1-starer-kit` is the name of the container to run.
 
 To learn more about Docker [visit the docs](https://docs.docker.com/engine/userguide/intro/).
-
-### GPU support
-
-The current image does not support GPU use. An image with GPU support is in the works although this would only work with a Linux base OS.
 
 [carnd_docker_hub]: https://hub.docker.com/r/udacity/carnd-term1-starter-kit/
 
