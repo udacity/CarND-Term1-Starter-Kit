@@ -15,7 +15,7 @@ Supported Sytems: Linux (CPU), Mac (CPU), Windows (CPU)
 
 | Pros                         | Cons                                               |
 |------------------------------|----------------------------------------------------|
-| More straight-forward to use | AWS or GPU support in not built in (have to do this yourself)              |
+| More straight-forward to use | AWS or GPU support is not built in (have to do this yourself)              |
 | More community support       | Implementation is local and OS specific            |
 | More heavily adopted         |                                                    |
 
