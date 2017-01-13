@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-. activate carnd_term_1
+. activate carnd-term1
 
 if [ -z "$1" ]
   then
