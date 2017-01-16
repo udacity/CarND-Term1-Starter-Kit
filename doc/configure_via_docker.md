@@ -29,11 +29,11 @@ Instructions for installation very by operating system and version.
 
 | OS                                       | Installation<br>Instruction               | Docker System               | Shell                      | Access Jupyter at |
 |:-----------------------------------------|:-----------------------------------------:|:----------------------------|:--------------------------:|:-----------------:|
-| Linux                                    | [Here](doc/docker_for_linux.md)           | Docker for Linux            | `bash`                     | `localhost:8888`  |
-| MacOS <br>>= 10.10.3 (Yosemite)              | [Here](doc/docker_for_mac.md)             | Docker for Mac              | `bash`                     | `localhost:8888`  |
-| MacOS <br>>= 10.8 (Mountain Lion)            | [Here](doc/docker_toolbox_for_mac.md)     | Docker Toolbox for Max      | Docker Quickstart Terminal | `#DOCKERIP:8888`  |
-| Windows <br>10 Pro, Enterprise, or Education | [Here](doc/docker_for_windows.md)         | Docker for Windows          | `Windows PowerShell`       | `localhost:8888`  |
-| Windows <br>7, 8, 8.1, or 10 Home            | [Here](doc/docker_toolbox_for_windows.md) | Docker Toolbox for Windows  | Docker Quickstart Terminal | `#DOCKERIP:8888`  |
+| Linux                                    | [Here](docker_for_linux.md)           | Docker for Linux            | `bash`                     | `localhost:8888`  |
+| MacOS <br>>= 10.10.3 (Yosemite)              | [Here](docker_for_mac.md)             | Docker for Mac              | `bash`                     | `localhost:8888`  |
+| MacOS <br>>= 10.8 (Mountain Lion)            | [Here](docker_toolbox_for_mac.md)     | Docker Toolbox for Max      | Docker Quickstart Terminal | `#DOCKERIP:8888`  |
+| Windows <br>10 Pro, Enterprise, or Education | [Here](docker_for_windows.md)         | Docker for Windows          | `Windows PowerShell`       | `localhost:8888`  |
+| Windows <br>7, 8, 8.1, or 10 Home            | [Here](docker_toolbox_for_windows.md) | Docker Toolbox for Windows  | Docker Quickstart Terminal | `#DOCKERIP:8888`  |
 
 ---
 
