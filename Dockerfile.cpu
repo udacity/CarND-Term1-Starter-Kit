@@ -19,24 +19,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
-    python get-pip.py && \
-    rm get-pip.py
-
-ADD https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh tmp/Miniconda3-latest-Linux-x86_64.sh
-RUN bash tmp/Miniconda3-latest-Linux-x86_64.sh -b
+ADD https://repo.continuum.io/miniconda/Miniconda3-4.2.12-Linux-x86_64.sh tmp/Miniconda3-4.2.12-Linux-x86_64.sh
+RUN bash tmp/Miniconda3-4.2.12-Linux-x86_64.sh -b
 ENV PATH $PATH:/root/miniconda3/bin/
 
-COPY environment.yml  .
-RUN conda install --yes pyyaml
-RUN conda env create -f=environment.yml --name carnd-term1
+COPY environment.yml .
+RUN conda env create -f environment.yml
 
-# Install ffmpeg
-RUN pip install imageio
-COPY ffmpeg.py .
-RUN python -m ffmpeg
-
-# cleanup tarballs and downloaded package files
+# Cleanup tarballs and downloaded package files
 RUN conda clean -tp -y
 
 # Set up our notebook config.
