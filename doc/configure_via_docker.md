@@ -16,7 +16,7 @@ The tricky part to working with Docker will be accessing your project code while
 
 ### GPU support
 
-GPU Support is available for AWS using `nvidia-docker`. Start [here](doc/docker_for_aws.md). 
+GPU Support is available for AWS using `nvidia-docker`. Start [here](docker_for_aws.md). 
 
 ---
 
