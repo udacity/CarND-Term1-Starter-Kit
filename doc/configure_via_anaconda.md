@@ -73,8 +73,13 @@ Now that you have created an environment, in order to use it, you will need to a
 
 **Activate** the `carnd-term1` environment:
 
+### OS X and Linux
 ```sh
 $ source activate carnd-term1
+```
+### Windows
+```sh
+$ activate carnd-term1
 ```
 
 That's it. Now all of the `carnd-term1` libraries are available to you.
