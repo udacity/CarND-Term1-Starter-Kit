@@ -1,4 +1,4 @@
-FROM python:3.5.2
+FROM nvidia/cuda:8.0-cudnn5-runtime-ubuntu16.04
 
 MAINTAINER @joshuacook
 
@@ -10,11 +10,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libpng12-dev \
         libzmq3-dev \
         pkg-config \
+	python \
         python3-dev \
         rsync \
         software-properties-common \
         unzip \
         libgtk2.0-0 \
+        git \
+	tcl-dev \
+	tk-dev \	
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -23,13 +27,8 @@ ADD https://repo.continuum.io/miniconda/Miniconda3-4.2.12-Linux-x86_64.sh tmp/Mi
 RUN bash tmp/Miniconda3-4.2.12-Linux-x86_64.sh -b
 ENV PATH $PATH:/root/miniconda3/bin/
 
-COPY environment.yml  .
-RUN conda env create -f=environment.yml
-
-# Install TensorFlow GPU version.
-ENV TF_BINARY_URL https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-0.12.0-cp35-cp35m-linux_x86_64.whl
-
-RUN pip --no-cache-dir install $TF_BINARY_URL
+COPY environment-gpu.yml  ./environment.yml
+RUN conda env create -f=environment.yml --name carnd-term1 --debug -v -v
 
 # cleanup tarballs and downloaded package files
 RUN conda clean -tp -y
@@ -40,6 +39,10 @@ COPY jupyter_notebook_config.py /root/.jupyter/
 # Term 1 workdir
 RUN mkdir /src
 WORKDIR "/src"
+
+# Make sure CUDNN is detected
+ENV LD_LIBRARY_PATH /usr/local/cuda/lib64/:$LD_LIBRARY_PATH
+RUN ln -s /usr/local/cuda/lib64/libcudnn.so.5 /usr/local/cuda/lib64/libcudnn.so
 
 # TensorBoard
 EXPOSE 6006
