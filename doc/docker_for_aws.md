@@ -93,12 +93,7 @@ to destroy your instance when you are not using it.**
       (EC2-GPU) $ sudo apt-get update && sudo apt-get install -y --no-install-recommends cuda-drivers
       ```
 
-   1. Install nvidia-docker and nvidia-docker-plugin
-   
-      ```
-      (EC2-GPU) $ wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.0-rc.3/nvidia-docker_1.0.0.rc.3-1_amd64.deb
-      (EC2-GPU) $ sudo dpkg -i /tmp/nvidia-docker*.deb && rm /tmp/nvidia-docker*.deb
-      ```
+   1. Install [nvidia-docker](https://github.com/NVIDIA/nvidia-docker#quick-start)
       
    1. Run the test image
    
