@@ -37,16 +37,19 @@ Using Anaconda consists of the following:
 - **Mac:** http://conda.pydata.org/docs/install/quick.html#os-x-miniconda-install
 - **Windows:** http://conda.pydata.org/docs/install/quick.html#windows-miniconda-install
 
-**Setup** your the `carnd-term1` environment. Running this command will create a new `conda` environment that is provisioned with all libraries you need to be successful in this program.
+**Setup** your the `carnd-term1` environment. 
 
 ```sh
 git clone https://github.com/udacity/CarND-Term1-Starter-Kit.git
 cd CarND-Term1-Starter-Kit
 ```
 
-If you are on Windows, rename `meta_windows_patch.yml` to `meta.yml`
+If you are on Windows, **rename**   
+`meta_windows_patch.yml` to   
+`meta.yml`
 
-``
+**Create** carnd-term1.  Running this command will create a new `conda` environment that is provisioned with all libraries you need to be successful in this program.
+```
 conda env create -f environment.yml
 ```
 
