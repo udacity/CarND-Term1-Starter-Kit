@@ -42,6 +42,11 @@ Using Anaconda consists of the following:
 ```sh
 git clone https://github.com/udacity/CarND-Term1-Starter-Kit.git
 cd CarND-Term1-Starter-Kit
+```
+
+If you are on Windows, rename `meta_windows_patch.yml` to `meta.yml`
+
+``
 conda env create -f environment.yml
 ```
 
