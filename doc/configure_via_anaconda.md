@@ -78,6 +78,12 @@ Now that you have created an environment, in order to use it, you will need to a
 $ source activate carnd-term1
 ```
 ### Windows
+Depending on shell either:
+```sh
+$ source activate carnd-term1
+```
+or
+
 ```sh
 $ activate carnd-term1
 ```
