@@ -23,7 +23,7 @@ GPU Support is available for AWS using `nvidia-docker`. Start [here](docker_for_
 
 ### Install Docker On Your Computer
 
-Instructions for installation very by operating system and version.
+Instructions for installation vary by operating system and version.
 
 
 
@@ -90,10 +90,10 @@ container, this allows us to access port 8888 in the container
 by visiting `localhost:8888`.
 
 `-v ${pwd}:/src` mounts the pwd (present working directory) to the /src
-directory in the container. Basically, this let's us access files
+directory in the container. Basically, this lets us access files
 from our local machine on the docker container.
 
-`udacity/carnd-term1-starer-kit` is the name of the container to run.
+`udacity/carnd-term1-starter-kit` is the name of the container to run.
 
 To learn more about Docker [visit the docs](https://docs.docker.com/engine/userguide/intro/).
 
