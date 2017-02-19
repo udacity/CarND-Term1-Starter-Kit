@@ -20,5 +20,5 @@ dependencies:
     - imageio=2.1.2
     - pip:
         - moviepy
-        - tensorflow
+        - tensorflow==0.12.1
         - git+https://github.com/fchollet/keras.git
