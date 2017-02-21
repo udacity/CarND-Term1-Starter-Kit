@@ -20,6 +20,8 @@ Using Anaconda consists of the following:
 
 **Download** the version of `miniconda` that matches your system. Make sure you download the version for Python 3.5.
 
+**NOTE**: There have been reports of issues using the latest miniconda. If it gives you issues try versions `4.3.11` or `4.2.12` from [here](https://repo.continuum.io/miniconda/).
+
 |        | Linux | Mac | Windows | 
 |--------|-------|-----|---------|
 | 64-bit | [64-bit (bash installer)][lin64] | [64-bit (bash installer)][mac64] | [64-bit (exe installer)][win64]
