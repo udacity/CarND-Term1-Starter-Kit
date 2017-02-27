@@ -17,6 +17,7 @@ dependencies:
     - flask-socketio
     - seaborn
     - pandas
+    - ffmpeg
     - imageio=2.1.2
     - pip:
         - moviepy
