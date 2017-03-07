@@ -99,3 +99,8 @@ To learn more about Docker [visit the docs](https://docs.docker.com/engine/userg
 
 [carnd_docker_hub]: https://hub.docker.com/r/udacity/carnd-term1-starter-kit/
 
+#### For Windows
+
+Use the ip address of the container to connect to Jupyter notebook, this can be found by opening another 
+docker terminal and running this command: `docker-machine ip default`. Jupyter server can then be accessed
+by going to this page from your browser: `http://[ip-of-container]:8888`.
