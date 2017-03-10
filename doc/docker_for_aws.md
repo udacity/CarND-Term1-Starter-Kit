@@ -63,6 +63,8 @@ to destroy your instance when you are not using it.**
                          udacity-carnd-gpu
    ```
    
+   **Note: ami-a9d276c9 is available in us-west-2 (Oregon) region**
+
    You may run into the error:
    
    ```
