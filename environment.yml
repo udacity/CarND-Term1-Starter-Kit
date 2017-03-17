@@ -23,4 +23,4 @@ dependencies:
     - pip:
         - moviepy
         - tensorflow==0.12.1
-        - git+https://github.com/fchollet/keras.git
+        - keras==1.2.1
