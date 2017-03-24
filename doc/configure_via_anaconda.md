@@ -57,12 +57,10 @@ conda env create -f environment.yml
 
 *Note*: Some Mac users have reported issues installing TensorFlow using this method. The cause is unknown but seems to be related to `pip`. For the time being, we recommend opening environment.yml in a text editor and swapping
 ```yaml
-...
     - tensorflow==0.12.1
 ```
 with
 ```yaml
-...
     - https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.12.1-py3-none-any.whl
 ```
 
