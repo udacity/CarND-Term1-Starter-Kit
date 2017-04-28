@@ -22,5 +22,5 @@ dependencies:
     - pyqt=4.11.4
     - pip:
         - moviepy
-        - https://storage.googleapis.com/tensorflow/windows/gpu/tensorflow_gpu-1.1.0-cp35-cp35m-win_amd64.whl
+        - https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.1.0-cp34-cp34m-linux_x86_64.whl
         - keras==2.0.3
