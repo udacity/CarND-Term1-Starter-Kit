@@ -18,7 +18,7 @@ Using Anaconda consists of the following:
 
 ## Installation
 
-**Download** the version of `miniconda` that matches your system. Python 3.6 or 3.5 should work.
+**Download** the latest version of `miniconda` that matches your system.
 
 **NOTE**: There have been reports of issues creating an environment using miniconda `v4.3.13`. If it gives you issues try versions `4.3.11` or `4.2.12` from [here](https://repo.continuum.io/miniconda/).
 
