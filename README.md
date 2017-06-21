@@ -4,7 +4,7 @@
 
 The purpose of this project is to provide unified software dependency support for students enrolled in Term 1 of the [Udacity Self-Driving Car Engineer Nanodegree](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013).
 
-Python 3 is used for entirety of term 1.
+Python 3 is used for the entirety of term 1.
 
 There are two ways to get up and running:
 
