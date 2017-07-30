@@ -32,3 +32,7 @@ Supported Systems : AWS (CPU, [GPU](doc/docker_for_aws.md)), Linux (CPU), Mac (C
 | AWS, GPU support                    | Less community support               |
 | Practice with Docker              | Have to manage images and containers |
 |                                     |                                      |
+
+#Trouble Shooting
+
+If you get an Import Error on cv2 and have ROS installed. See (here)[https://stackoverflow.com/questions/43019951/after-install-ros-kinetic-cannot-import-opencv#]
