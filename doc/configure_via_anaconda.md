@@ -39,7 +39,7 @@ Using Anaconda consists of the following:
 - **Mac:** http://conda.pydata.org/docs/install/quick.html#os-x-miniconda-install
 - **Windows:** http://conda.pydata.org/docs/install/quick.html#windows-miniconda-install
 
-**Setup** your the `carnd-term1` environment. 
+**Setup** the `carnd-term1` environment. 
 
 ```sh
 git clone https://github.com/udacity/CarND-Term1-Starter-Kit.git
