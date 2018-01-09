@@ -92,7 +92,7 @@ Prior to installing tensorflow-gpu for Ubuntu or Windows as part of the Anaconda
 
 When creating the environment, at the **Create** step above, change the command to:
 ```
-conda env create -f environment.yml
+conda env create -f environment-gpu.yml
 ```
 Otherwise, follow the same steps as above.
 
