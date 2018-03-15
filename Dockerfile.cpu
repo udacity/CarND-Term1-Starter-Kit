@@ -2,8 +2,9 @@ FROM python:3.5.2
 
 MAINTAINER @joshuacook
 
-# Pick up some TF dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
+# Pick up some TF dependencies (as a first step, add missed repos)
+RUN echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/sources.list && \
+    apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
         curl \
         libfreetype6-dev \
@@ -15,6 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         software-properties-common \
         unzip \
         libgtk2.0-0 \
+        ffmpeg \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
