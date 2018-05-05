@@ -63,6 +63,12 @@ with
 ```yaml
     - https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.12.1-py3-none-any.whl
 ```
+If you have encountered a No module named 'requests' error, try to add in a line under 'pip' line in the environment.yml in a text editor
+
+with
+```yaml
+    - requests
+```
 
 **Verify** that the carnd-term1 environment was created in your environments:
 
