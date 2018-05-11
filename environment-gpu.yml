@@ -10,6 +10,8 @@ dependencies:
     - opencv3
     - pillow
     - scikit-learn
+    - cudatoolkit==8.0
+    - cudnn==5.1
     - scikit-image
     - scipy
     - h5py
