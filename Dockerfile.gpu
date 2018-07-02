@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         pkg-config \
         python3-dev \
         rsync \
+        netbase \
         software-properties-common \
         unzip \
         libgtk2.0-0 \
