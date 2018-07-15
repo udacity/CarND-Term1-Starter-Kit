@@ -1,0 +1,23 @@
+# Set the base image use anaconda
+FROM continuumio/anaconda3
+
+# Set working directory
+WORKDIR /home/notebooks
+
+# Add requirements file
+ADD requirements.txt /app/
+
+# Installs, clean, and update
+RUN apt-get update \
+    && apt-get clean \
+    && apt-get update -qqq \
+    && apt-get install -y -q g++ \
+    && pip install --upgrade pip
+
+RUN pip install -r /app/requirements.txt \
+    && pip install -U tensorflow
+
+RUN pip install keras
+
+# Run shell command for notebook on start
+ENTRYPOINT ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root"]
