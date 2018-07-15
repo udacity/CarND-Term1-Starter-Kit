@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  carnd:
+    build:
+      context: .
+      dockerfile: Dockerfile.cpu
+
+    ports:
+      - '8888:8888'
