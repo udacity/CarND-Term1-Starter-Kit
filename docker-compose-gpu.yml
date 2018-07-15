@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+    carnd-starter-kit:
+        build:
+            context: .
+            dockerfile: Dockerfile.gpu
+        ports:
+            - '8888:8888'
