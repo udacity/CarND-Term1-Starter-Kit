@@ -26,6 +26,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ADD https://repo.continuum.io/miniconda/Miniconda3-4.5.4-Linux-x86_64.sh tmp/Miniconda3-4.5.4-Linux-x86_64.sh
 RUN bash tmp/Miniconda3-4.5.4-Linux-x86_64.sh -b
 ENV PATH $PATH:/root/miniconda3/bin/
+RUN conda update -n base conda -y 
 
 COPY environment-gpu.yml  ./environment.yml
 RUN conda env create -f=environment.yml --name carnd-term1 --debug -v -v
