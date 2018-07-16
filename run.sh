@@ -4,11 +4,10 @@ set -e
 
 if [ -z "$1" ]
   then
-    jupyter notebook --allow-root
+    jupyter lab --allow-root
 elif [ "$1" == *".ipynb"* ]
   then
-    jupyter notebook "$1" --allow-root
+    jupyter lab "$1" --allow-root
 else
     exec "$@"
 fi
-
