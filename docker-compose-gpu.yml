@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-    carnd-starter-kit:
+    gpu:
         build:
             context: .
             dockerfile: Dockerfile.gpu
