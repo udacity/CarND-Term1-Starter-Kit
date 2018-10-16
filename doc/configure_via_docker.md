@@ -66,13 +66,13 @@ differently based on your shell.
 If you're using `Windows PowerShell`:
 
 ```sh
-docker run -it --rm -p 8888:8888 -v ${pwd}:/src udacity/carnd-term1-starter-kit
+docker run -it --rm --entrypoint "/run.sh" -p 8888:8888 -v ${pwd}:/src udacity/carnd-term1-starter-kit
 ```
 
 If you're using `bash` or Docker Quickstart Terminal:
 
 ```sh
-docker run -it --rm -p 8888:8888 -v `pwd`:/src udacity/carnd-term1-starter-kit
+docker run -it --rm --entrypoint "/run.sh" -p 8888:8888 -v `pwd`:/src udacity/carnd-term1-starter-kit
 ```
 
 Let's break this down.
@@ -84,6 +84,10 @@ provides an I/O to the container.
 
 `--rm` removes the container once it stops running.
 It prevents the buildup of stale containers once you stop them from running.
+
+`--entrypoint "/run.sh"` tells the container to run `run.sh` when it opens.
+In our case, this file activates the conda environment and opens a jupyter notebook in the background.
+This is also included in the dockerfile, but sometimes does not appropriately run without this flag.
 
 `-p 8888:8888` maps port 8888 on our local machine to port 8888 in the Docker
 container, this allows us to access port 8888 in the container
