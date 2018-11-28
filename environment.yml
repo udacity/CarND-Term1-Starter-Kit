@@ -7,7 +7,6 @@ dependencies:
     - numpy
     - matplotlib
     - jupyter
-    - opencv3
     - pillow
     - scikit-learn
     - scikit-image
