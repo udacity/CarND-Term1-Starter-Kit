@@ -3,7 +3,7 @@ channels:
     - https://conda.anaconda.org/menpo
     - conda-forge
 dependencies:
-    - python
+    - python>=3.6
     - matplotlib
     - jupyter
     - pillow
