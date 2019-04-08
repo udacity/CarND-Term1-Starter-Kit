@@ -1,0 +1,7 @@
+The original environment-gpu file requires tensorflow 1.3.0 that does not support CUDA 10.
+The latest GPUs, such as Nvidia RTX 2080 Ti require CUDA 10 or later.
+This environment uses the latest tensorflow version (tf-nightly-gpu) that supports CUDA 10.
+You can use this environment if you have a new GPU and you want to use it for your projects.
+IMPORTANT WARNINGS: 
+1) The trained models from the new tensorflow version are not compatible with older tensorflow versions. If you work on a team project, everyone should have the same tensorflow version.
+2) The capstone warning requires tensorflow version 1.3.0 because Carla has this version installed. You can use the latest version for development but you should train the final model with version 1.3.0. You may use the Udacity's workspace or an AWS instance for the final training.
