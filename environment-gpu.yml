@@ -17,7 +17,7 @@ dependencies:
     - seaborn
     - pandas
     - ffmpeg
-    - imageio=2.1.2
+    - imageio
     - pyqt=4.11.4
     - pip:
         - moviepy
