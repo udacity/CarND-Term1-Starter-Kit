@@ -18,26 +18,9 @@ Using Anaconda consists of the following:
 
 ## Installation
 
-**Download** the latest version of `miniconda` that matches your system.
+**Download** [Miniconda3-4.3.14-Linux-x86_64.sh](https://repo.continuum.io/miniconda/Miniconda3-4.3.14-Linux-x86_64.sh) . Feel free to try more recent version of conda, that can be found [here](https://repo.continuum.io/miniconda/).
 
-**NOTE**: There have been reports of issues creating an environment using miniconda `v4.3.13`. If it gives you issues try versions `4.3.11` or `4.2.12` from [here](https://repo.continuum.io/miniconda/).
-
-|        | Linux | Mac | Windows | 
-|--------|-------|-----|---------|
-| 64-bit | [64-bit (bash installer)][lin64] | [64-bit (bash installer)][mac64] | [64-bit (exe installer)][win64]
-| 32-bit | [32-bit (bash installer)][lin32] |  | [32-bit (exe installer)][win32]
-
-[win64]: https://repo.continuum.io/miniconda/Miniconda3-latest-Windows-x86_64.exe
-[win32]: https://repo.continuum.io/miniconda/Miniconda3-latest-Windows-x86.exe
-[mac64]: https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
-[lin64]: https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
-[lin32]: https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86.sh
-
-**Install** [miniconda](http://conda.pydata.org/miniconda.html) on your machine. Detailed instructions:
-
-- **Linux:** http://conda.pydata.org/docs/install/quick.html#linux-miniconda-install
-- **Mac:** http://conda.pydata.org/docs/install/quick.html#os-x-miniconda-install
-- **Windows:** http://conda.pydata.org/docs/install/quick.html#windows-miniconda-install
+**NOTE**: There have been reports of issues creating an environment using miniconda `latest` , `v4.8.2` `v4.3.13` and  `4.3.11` .
 
 **Setup** the `carnd-term1` environment. 
 
@@ -51,6 +34,11 @@ If you are on Windows, **rename**
 `meta.yml`
 
 **Create** carnd-term1.  Running this command will create a new `conda` environment that is provisioned with all libraries you need to be successful in this program.
+
+### Setup the environment
+
+#### Standard environment
+
 ```
 conda env create -f environment.yml
 ```
@@ -82,6 +70,18 @@ conda info --envs
 conda clean -tp
 ```
 
+#### Environment for Nvidia GPU 
+
+Prior to installing tensorflow-gpu for Ubuntu or Windows as part of the Anaconda environment for Nvidia GPUs, install the appropriate versions of CUDA Toolkit and cuDNN, along with the necessary Nvidia drivers. See Ubuntu instructions [here](https://www.tensorflow.org/install/install_linux) and Windows instructions [here](https://www.tensorflow.org/install/install_windows).
+
+When creating the environment, at the **Create** step above, change the command to:
+
+```
+conda env create -f environment-gpu.yml
+```
+
+Otherwise, follow the same steps as above.
+
 ### Uninstalling 
 
 To uninstall the environment:
@@ -89,18 +89,6 @@ To uninstall the environment:
 ```sh
 conda env remove -n carnd-term1
 ```
-
----
-
-## GPU Installation
-
-Prior to installing tensorflow-gpu for Ubuntu or Windows as part of the Anaconda environment for Nvidia GPUs, install the appropriate versions of CUDA Toolkit and cuDNN, along with the necessary Nvidia drivers. See Ubuntu instructions [here](https://www.tensorflow.org/install/install_linux) and Windows instructions [here](https://www.tensorflow.org/install/install_windows).
-
-When creating the environment, at the **Create** step above, change the command to:
-```
-conda env create -f environment-gpu.yml
-```
-Otherwise, follow the same steps as above.
 
 ---
 
