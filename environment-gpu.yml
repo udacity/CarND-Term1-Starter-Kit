@@ -3,7 +3,7 @@ channels:
     - https://conda.anaconda.org/menpo
     - conda-forge
 dependencies:
-    - python==3.5.2
+    - python==3.6.3
     - numpy
     - matplotlib
     - jupyter
@@ -18,7 +18,7 @@ dependencies:
     - pandas
     - ffmpeg
     - imageio
-    - pyqt=4.11.4
+    - pyqt=5.6.0
     - pip:
         - moviepy
         - opencv-python
