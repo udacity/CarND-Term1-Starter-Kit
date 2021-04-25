@@ -94,7 +94,7 @@ conda env remove -n carnd-term1
 
 ## GPU Installation
 
-Prior to installing tensorflow-gpu for Ubuntu or Windows as part of the Anaconda environment for Nvidia GPUs, install the appropriate versions of CUDA Toolkit and cuDNN, along with the necessary Nvidia drivers. See Ubuntu instructions [here](https://www.tensorflow.org/install/install_linux) and Windows instructions [here](https://www.tensorflow.org/install/install_windows).
+Prior to installing tensorflow-gpu for Ubuntu or Windows as part of the Anaconda environment for Nvidia GPUs, install the appropriate versions of CUDA Toolkit and cuDNN, along with the necessary Nvidia drivers. See Ubuntu instructions [here](https://www.tensorflow.org/install/install) and Windows instructions [here](https://www.tensorflow.org/install/install_windows).
 
 When creating the environment, at the **Create** step above, change the command to:
 ```
