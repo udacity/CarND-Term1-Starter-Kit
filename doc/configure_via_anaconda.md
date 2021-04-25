@@ -35,9 +35,9 @@ Using Anaconda consists of the following:
 
 **Install** [miniconda](http://conda.pydata.org/miniconda.html) on your machine. Detailed instructions:
 
-- **Linux:** http://conda.pydata.org/docs/install/quick.html#linux-miniconda-install
-- **Mac:** http://conda.pydata.org/docs/install/quick.html#os-x-miniconda-install
-- **Windows:** http://conda.pydata.org/docs/install/quick.html#windows-miniconda-install
+- **Linux:** https://conda.io/en/latest/miniconda.html#linux-installers
+- **Mac:** https://conda.io/en/latest/miniconda.html#macosx-installers
+- **Windows:** https://conda.io/en/latest/miniconda.html#windows-installers
 
 **Setup** the `carnd-term1` environment. 
 
