@@ -69,7 +69,19 @@ with
 ```yaml
     - requests
 ```
+*Note*: In Project Behavioral Cloning, classroom workspaces has Keras==2.2.4 version and in Project Traffic Sign Classifier classroom workspaces has Keras==2.0.9. To install Keras==2.2.4 we would recommend opening environment.yml in a text editor and swapping
+```yaml
+    - keras==2.0.9
+```
+with
 
+```yaml
+    - keras==2.2.4
+```
+or write
+```
+    pip install keras==2.2.4
+```
 **Verify** that the carnd-term1 environment was created in your environments:
 
 ```sh
